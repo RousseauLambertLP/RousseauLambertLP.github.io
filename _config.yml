@@ -10,12 +10,11 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme             : "mmistakes/minimal-mistakes@4.15.2"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-CA
+locale                   : "en-CA"
 title                    : "Louis-Philippe R.-Lambert"
 title_separator          : "-"
 name                     : "Louis-Philippe R.-Lambert"
@@ -107,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "Louis-Philippe R.-Lambert"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/profile_snow.jpg"
   bio              : "TBD"
   location         : "Montréal, Québec"
   email            : "louis-philippe.rlambert@protonmail.com"
@@ -284,7 +283,7 @@ defaults:
       comments: # true
       share: true
       related: true
-
+  #_pages
   - scope:
       path: ""
       type: pages
