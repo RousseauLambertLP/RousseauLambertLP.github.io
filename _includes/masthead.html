@@ -1,3 +1,9 @@
+{% assign home_url = '/' %}
+{% assign navigation = site.data.navigation.main %}
+{% if page.lang == 'fr' %}
+  {% assign home_url = '/fr/' %}
+  {% assign navigation = site.data.navigation.fr %}
+{% endif %}
 {% if site.logo contains "://" %}
   {% capture logo_path %}{{ site.logo }}{% endcapture %}
 {% else %}
@@ -9,11 +15,11 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt=""></a>
+          <a class="site-logo" href="{{ home_url | relative_url }}"><img src="{{ logo_path | relative_url }}" alt=""></a>
         {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
+        <a class="site-title" href="{{ home_url | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
         <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
+          {%- for link in navigation -%}
             {%- if link.url contains '://' -%}
               {%- assign url = link.url -%}
             {%- else -%}
@@ -24,6 +30,9 @@
             </li>
           {%- endfor -%}
         </ul>
+        {% if page.translation_url %}
+        <a class="language-switch" href="{{ page.translation_url | relative_url }}" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" lang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" aria-label="{% if page.lang == 'fr' %}Read this page in English{% else %}Lire cette page en français{% endif %}">{% if page.lang == 'fr' %}EN{% else %}FR{% endif %}</a>
+        {% endif %}
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>

@@ -1,5 +1,7 @@
 ---
 title: "About Me"
+lang: en
+translation_url: /fr/a-propos/
 permalink: /about/
 header:
   image: "/images/sw_sun.jpg"
@@ -26,11 +28,11 @@ Useful starting points:
 
 I'm interested in efficient access to large weather datasets, cloud-native geospatial formats, and practical uses of AI and language models with geospatial APIs. I care about keeping the underlying data, rules and validation traceable.
 
-I also share a [technology watch](/vigie/) covering open weather data, geospatial software, standards and applied AI. It focuses on what a change means in practice, with links to the original sources.
+I also share a [technology watch](/en/vigie/) covering open weather data, geospatial software, standards and applied AI. It focuses on what a change means in practice, with links to the original sources.
 
 ## Background and life outside work
 
-I graduated from the Université de Sherbrooke with a bachelor's degree in applied geomatics in 2016. My [academic archive](/school/) preserves earlier projects and research material.
+I graduated from the Université de Sherbrooke with a bachelor's degree in applied geomatics in 2016.
 
 Outside work, I enjoy hiking, camping, photography and sports, especially hockey.
 

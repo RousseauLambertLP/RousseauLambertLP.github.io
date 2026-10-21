@@ -173,6 +173,7 @@ exclude:
   - README
   - tmp
   - CONTRIBUTING.md
+  - _pages/school.md
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
 keep_files:
@@ -307,12 +308,26 @@ defaults:
       author_profile: true
       share: false
       comments: false
+  - scope:
+      path: ""
+      type: vigie_en
+    values:
+      layout: vigie
+      lang: en
+      author_profile: true
+      share: false
+      comments: false
 share: true
 
 collections:
+  vigie_en:
+    output: true
+    permalink: /en/vigie/:path/
   vigie:
     output: true
     permalink: /vigie/:path/
   school:
-    output: true
+    output: false
     permalink: /:collection/:path/
+
+# English editions use the same publication dates as the French collection.

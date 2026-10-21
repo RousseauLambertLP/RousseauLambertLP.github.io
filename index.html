@@ -1,5 +1,7 @@
 ---
 layout: single
+lang: en
+translation_url: /fr/
 title: "Open data. Useful APIs."
 excerpt: "Weather data, geospatial services and open standards, from a practitioner's perspective."
 author_profile: true
@@ -18,18 +20,18 @@ header:
     <p>My work with MSC GeoMet, geospatial APIs and interoperability, and the ideas I'm exploring.</p>
     <a class="btn btn--primary" href="{{ '/about/' | relative_url }}">Read about my work</a>
   </section>
-  <section class="watch-card" lang="fr">
-    <p class="watch-kicker">Données · Standards · Logiciels</p>
-    <h2>Vigie technologique</h2>
-    <p>Une sélection de nouvelles sur les données météo ouvertes, les API géospatiales et leurs outils. Avec sources et implications pratiques.</p>
-    <a class="btn btn--primary" href="{{ '/vigie/' | relative_url }}">Consulter la vigie</a>
+  <section class="watch-card" lang="en">
+    <p class="watch-kicker">Data · Standards · Software</p>
+    <h2>Technology watch</h2>
+    <p>Selected news about open weather data, geospatial APIs and their tools, with sources and practical implications.</p>
+    <a class="btn btn--primary" href="{{ '/en/vigie/' | relative_url }}">Read the watch</a>
   </section>
 </div>
 
-{% assign latest = site.vigie | sort: 'date' | reverse | first %}
+{% assign latest = site.vigie_en | sort: 'date' | reverse | first %}
 {% if latest %}
-<section class="watch-latest" lang="fr">
-  <p class="watch-kicker">Dernière édition · {{ latest.date | date: "%Y-%m-%d" }}</p>
+<section class="watch-latest" lang="en">
+  <p class="watch-kicker">Latest edition · {{ latest.date | date: "%Y-%m-%d" }}</p>
   <h2><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h2>
   <p>{{ latest.summary | escape }}</p>
 </section>

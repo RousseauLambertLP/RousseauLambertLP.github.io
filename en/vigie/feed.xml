@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /en/vigie/feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Technology watch — Louis-Philippe Rousseau-Lambert</title>
+  <link>{{ '/en/vigie/' | absolute_url | xml_escape }}</link>
+  <description>Open weather data, geospatial APIs, standards and software: sources and practical implications.</description>
+  <language>en-ca</language>
+  <atom:link href="{{ '/en/vigie/feed.xml' | absolute_url | xml_escape }}" rel="self" type="application/rss+xml" />
+  {% assign editions = site.vigie_en | sort: 'date' | reverse %}
+  {% for edition in editions limit:30 %}
+  <item>
+    <title>{{ edition.title | xml_escape }}</title>
+    <link>{{ edition.url | absolute_url | xml_escape }}</link>
+    <guid isPermaLink="true">{{ edition.url | absolute_url | xml_escape }}</guid>
+    <pubDate>{{ edition.date | date_to_rfc822 }}</pubDate>
+    <description>{{ edition.content | markdownify | xml_escape }}</description>
+  </item>
+  {% endfor %}
+</channel>
+</rss>

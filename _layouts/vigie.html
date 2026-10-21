@@ -1,10 +1,15 @@
 ---
 layout: single
 ---
-<div lang="fr">
-<p class="watch-kicker">Vigie technologique · {{ page.date | date: "%Y-%m-%d" }}</p>
+<div lang="{{ page.lang | default: 'fr' }}">
+<p class="watch-kicker">{% if page.lang == 'en' %}Technology watch{% else %}Vigie technologique{% endif %} · {{ page.date | date: "%Y-%m-%d" }}</p>
 {{ content }}
 <hr>
+{% if page.lang == 'en' %}
+<p><a href="{{ '/en/vigie/' | relative_url }}">← All editions</a> · <a href="{{ '/en/vigie/feed.xml' | relative_url }}">Subscribe to the RSS feed</a></p>
+<p class="watch-note">A personal watch prepared with the help of AI tools. Commentary and suggested actions are interpretations, not official communications from ECCC or MSC.</p>
+{% else %}
 <p><a href="{{ '/vigie/' | relative_url }}">← Toutes les éditions</a> · <a href="{{ '/vigie/feed.xml' | relative_url }}">S’abonner au flux RSS</a></p>
 <p class="watch-note">Veille personnelle préparée avec l’aide d’outils d’IA. Les commentaires et pistes d’action sont des interprétations, pas des communications officielles d’ECCC ou du SMC.</p>
+{% endif %}
 </div>

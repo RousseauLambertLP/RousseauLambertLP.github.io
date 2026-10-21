@@ -34,13 +34,13 @@
     {% endif %}
     {% if author.bio %}
       <p class="author__bio" itemprop="description">
-        {{ author.bio }}
+        {% if page.lang == 'fr' %}Données météo ouvertes · API géospatiales · Standards ouverts{% else %}{{ author.bio }}{% endif %}
       </p>
     {% endif %}
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
+    <button class="btn btn--inverse">{% if page.lang == 'fr' %}Me suivre{% else %}Follow{% endif %}</button>
     <ul class="author__urls social-icons">
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
@@ -51,7 +51,7 @@
       {% if author.links %}
         {% for link in author.links %}
           {% if link.label and link.url %}
-            <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}</a></li>
+            <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {% if page.lang == 'fr' and link.label == 'Email' %}Courriel{% else %}{{ link.label }}{% endif %}</a></li>
           {% endif %}
         {% endfor %}
       {% endif %}

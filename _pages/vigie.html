@@ -3,6 +3,7 @@ layout: single
 title: "Vigie technologique"
 permalink: /vigie/
 lang: fr
+translation_url: /en/vigie/
 excerpt: "Données météo ouvertes, API géospatiales, standards et logiciels : nouvelles, sources et implications pratiques."
 ---
 
@@ -11,7 +12,7 @@ excerpt: "Données météo ouvertes, API géospatiales, standards et logiciels :
 <p>Une sélection issue de ma veille professionnelle : standards OGC et WIS2, GeoMet, GDAL, MapServer, PROJ, pygeoapi, formats de données et IA appliquée. Chaque sujet relie une source à ses conséquences concrètes pour les personnes qui développent ou utilisent ces services.</p>
 
 <p><a class="btn btn--primary" href="{{ '/vigie/feed.xml' | relative_url }}">S’abonner au flux RSS</a> <a class="btn" href="#archives">Parcourir les archives</a></p>
-<p class="watch-note">Pour recevoir les éditions, ajoutez l’adresse du flux RSS à votre lecteur de flux. La fréquence visée est une édition les jours ouvrables; la date de chaque bulletin fait foi.</p>
+<p class="watch-note">Pour recevoir les éditions, ajoutez l’adresse du flux RSS à votre lecteur de flux. La fréquence visée est une édition chaque jour, fin de semaine comprise; la date de chaque bulletin fait foi.</p>
 
 {% assign editions = site.vigie | sort: 'date' | reverse %}
 {% assign latest = editions | first %}

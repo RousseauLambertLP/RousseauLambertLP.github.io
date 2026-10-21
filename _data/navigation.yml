@@ -1,16 +1,10 @@
-# main links
 main:
   - title: "About Me"
     url: /about/
+  - title: "Technology watch"
+    url: /en/vigie/
+fr:
+  - title: "À propos"
+    url: /fr/a-propos/
   - title: "Vigie technologique"
     url: /vigie/
-  - title: "Academic archive"
-    url: /school/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
