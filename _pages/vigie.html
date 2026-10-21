@@ -12,7 +12,7 @@ excerpt: "Données météo ouvertes, API géospatiales, standards et logiciels :
 <p>Une sélection issue de ma veille professionnelle : standards OGC et WIS2, GeoMet, GDAL, MapServer, PROJ, pygeoapi, formats de données et IA appliquée. Chaque sujet relie une source à ses conséquences concrètes pour les personnes qui développent ou utilisent ces services.</p>
 
 <p><a class="btn btn--primary" href="{{ '/vigie/feed.xml' | relative_url }}">S’abonner au flux RSS</a> <a class="btn" href="#archives">Parcourir les archives</a></p>
-<p class="watch-note">Pour recevoir les éditions, ajoutez l’adresse du flux RSS à votre lecteur de flux. La fréquence visée est une édition chaque jour, fin de semaine comprise; la date de chaque bulletin fait foi.</p>
+<p class="watch-note">Pour recevoir les éditions, ajoutez l’adresse du flux RSS à votre lecteur de flux. La recherche est quotidienne, fin de semaine comprise. Un seul bulletin regroupe les sujets retenus pour une date; aucun billet n’est publié sans nouvelle significative.</p>
 
 {% assign editions = site.vigie | sort: 'date' | reverse %}
 {% assign latest = editions | first %}
@@ -28,6 +28,7 @@ excerpt: "Données météo ouvertes, API géospatiales, standards et logiciels :
 {% endif %}
 
 <h2 id="archives">Archives</h2>
+<p class="watch-note">Les éditions des 15 au 20 octobre 2026 ont été ajoutées à partir des sujets retrouvés, avec des sources revérifiées. Les bulletins concernés signalent cette adaptation; aucun bulletin n’a été ajouté pour les 17 et 18 octobre.</p>
 <ul class="watch-archive">
 {% for edition in editions %}
   <li><time datetime="{{ edition.date | date_to_xmlschema }}">{{ edition.date | date: "%Y-%m-%d" }}</time> <a href="{{ edition.url | relative_url }}">{{ edition.title | escape }}</a><p>{{ edition.summary | escape }}</p></li>

@@ -9,7 +9,7 @@ excerpt: "Open weather data, geospatial APIs, standards and software: news, sour
 <p class="site-intro">News that matters for open weather data and geospatial services.</p>
 <p>A selection from my professional watch: OGC standards and WIS2, GeoMet, GDAL, MapServer, PROJ, pygeoapi, data formats and applied AI. Each item connects a source to its practical implications for people building or using these services.</p>
 <p><a class="btn btn--primary" href="{{ '/en/vigie/feed.xml' | relative_url }}">Subscribe to the RSS feed</a> <a class="btn" href="#archives">Browse the archive</a></p>
-<p class="watch-note">To receive editions, add the RSS feed address to your feed reader. The intended frequency is daily, including weekends; check each bulletin’s publication date.</p>
+<p class="watch-note">To receive editions, add the RSS feed address to your feed reader. Research runs daily, including weekends. One bulletin groups the selected topics for each date; no post is published when there is no significant news.</p>
 {% assign editions = site.vigie_en | sort: 'date' | reverse %}
 {% assign latest = editions | first %}
 {% if latest %}
@@ -23,6 +23,7 @@ excerpt: "Open weather data, geospatial APIs, standards and software: news, sour
 <p>The first edition will appear here when published.</p>
 {% endif %}
 <h2 id="archives">Archive</h2>
+<p class="watch-note">October 15–20, 2026 editions were backfilled from recovered topics with rechecked sources. Affected bulletins identify this adaptation; no bulletin was added for October 17–18.</p>
 <ul class="watch-archive">
 {% for edition in editions %}
   <li><time datetime="{{ edition.date | date_to_xmlschema }}">{{ edition.date | date: "%Y-%m-%d" }}</time> <a href="{{ edition.url | relative_url }}">{{ edition.title | escape }}</a><p>{{ edition.summary | escape }}</p></li>
