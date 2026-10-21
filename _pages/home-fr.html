@@ -1,36 +1,25 @@
 ---
 layout: single
-title: "Des données ouvertes. Des API utiles."
-permalink: /fr/
+title: Louis-Philippe Rousseau-Lambert
 lang: fr
 translation_url: /
-excerpt: "Données météo, services géospatiaux et standards ouverts : le point de vue d’un praticien."
-author_profile: true
-header:
-  image: "/images/iceland_skogarfoss.jpg"
+page_kind: home
+excerpt: Données géospatiales, services ouverts et interopérabilité.
+share: false
+permalink: /fr/
 ---
-<p class="site-intro">Je suis Louis-Philippe Rousseau-Lambert. Je travaille sur les services web géospatiaux et les données météo ouvertes au Service météorologique du Canada.</p>
-<p>Je m’intéresse à ce qui rend les données utiles au-delà de leur plateforme d’origine : des API claires, des standards ouverts, des outils fiables et une documentation pratique.</p>
-<div class="watch-grid">
-  <section class="watch-card">
-    <p class="watch-kicker">Parcours professionnel</p>
-    <h2>À propos</h2>
-    <p>Mon travail avec MSC GeoMet, les API géospatiales et l’interopérabilité, ainsi que les idées que j’explore.</p>
-    <a class="btn btn--primary" href="{{ '/fr/a-propos/' | relative_url }}">Découvrir mon travail</a>
-  </section>
-  <section class="watch-card">
-    <p class="watch-kicker">Données · Standards · Logiciels</p>
-    <h2>Vigie technologique</h2>
-    <p>Une sélection de nouvelles sur les données météo ouvertes, les API géospatiales et leurs outils. Avec sources et implications pratiques.</p>
-    <a class="btn btn--primary" href="{{ '/vigie/' | relative_url }}">Consulter la vigie</a>
-  </section>
-</div>
+
+<section class="professional-hero">
+  <p class="hero-eyebrow">Louis-Philippe Rousseau-Lambert</p>
+  <h1 id="page-title">Des données ouvertes aux applications concrètes.</h1>
+  <p class="hero-deck">Spécialiste en géomatique au Service météorologique du Canada. Je contribue au développement de GeoMet et à la diffusion des données environnementales par des API et des standards ouverts.</p>
+  <div class="hero-actions"><a class="btn btn--primary" href="/fr/a-propos/">Mon parcours →</a><a class="hero-secondary" href="/vigie/">Lire la vigie ↗</a></div>
+  <div class="hero-topics"><span>Données géospatiales</span><span>OGC API</span><span>Interopérabilité</span></div>
+</section>
+<section class="home-introduction"><p class="watch-kicker">De la donnée au service</p><h2>Développer. Structurer. Rendre accessible.</h2><p>Mon travail associe développement logiciel, gestion des données et collaboration pour faire évoluer des services géospatiaux fiables. Ce site présente mon parcours et une veille sur les outils et standards qui façonnent ces services.</p></section>
 {% assign latest = site.vigie | sort: 'date' | reverse | first %}
 {% if latest %}
-<section class="watch-latest">
-  <p class="watch-kicker">Dernière édition · {{ latest.date | date: "%Y-%m-%d" }}</p>
-  <h2><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h2>
-  <p>{{ latest.summary | escape }}</p>
-</section>
+<section class="home-watch"><div class="section-heading"><div><p class="watch-kicker">Veille professionnelle</p><h2>La dernière édition</h2></div><a class="text-link" href="/vigie/">Toutes les éditions →</a></div>
+<div class="watch-latest"><p class="watch-kicker">{{ latest.date | date: "%Y-%m-%d" }}</p><h3><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h3><p>{{ latest.summary | escape }}</p><a class="text-link" href="{{ latest.url | relative_url }}">Lire le bulletin →</a></div></section>
 {% endif %}
-<p class="watch-note">Site personnel. Les points de vue exprimés ici sont les miens.</p>
+<div class="home-links"><a href="/fr/a-propos/"><span class="watch-kicker">Parcours & expertise</span><h2>À propos ↗</h2><p>GeoMet, gestion des données géospatiales et collaboration.</p></a><a href="https://www.linkedin.com/in/louis-philippe-rousseau-lambert-a7408487/"><span class="watch-kicker">Réseau professionnel</span><h2>LinkedIn ↗</h2><p>Mon profil, mes publications et mes échanges professionnels.</p></a></div>

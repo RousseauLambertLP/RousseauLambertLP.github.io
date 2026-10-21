@@ -1,19 +1,9 @@
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{% if page.lang == 'fr' %}SUIVRE :{% else %}FOLLOW:{% endif %}</strong></li>
-    {% endif %}
-
-    {% if site.footer.links %}
-      {% for link in site.footer.links %}
-        {% if link.label and link.url %}
-          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}</a></li>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-
-    <li><a href="{% if page.lang == 'fr' %}{{ '/vigie/feed.xml' | relative_url }}{% else %}{{ '/en/vigie/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {% if page.lang == 'fr' %}FLUX RSS{% else %}RSS FEED{% endif %}</a></li>
-  </ul>
+<div class="professional-footer">
+  <div><strong>Louis-Philippe Rousseau-Lambert</strong><p>{% if page.lang == 'fr' %}Données géospatiales. Services ouverts. Interopérabilité.{% else %}Geospatial data. Open services. Interoperability.{% endif %}</p></div>
+  <nav aria-label="{% if page.lang == 'fr' %}Liens professionnels{% else %}Professional links{% endif %}">
+    <a href="https://www.linkedin.com/in/louis-philippe-rousseau-lambert-a7408487/">LinkedIn</a>
+    <a href="https://github.com/RousseauLambertLP">GitHub</a>
+    <a href="{% if page.lang == 'fr' %}{{ '/vigie/feed.xml' | relative_url }}{% else %}{{ '/en/vigie/feed.xml' | relative_url }}{% endif %}">RSS</a>
+  </nav>
+  <p class="footer-disclaimer">© {{ site.time | date: '%Y' }} · {% if page.lang == 'fr' %}Site personnel. Les opinions exprimées ici sont les miennes et ne représentent pas une position officielle d’ECCC ou du SMC.{% else %}Personal website. Views expressed here are my own and do not represent an official position of ECCC or MSC.{% endif %}</p>
 </div>
-
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {% if page.lang == 'fr' %}Propulsé par{% else %}Powered by{% endif %} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>

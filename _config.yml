@@ -15,9 +15,9 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale                   : "en-CA"
-title                    : "Louis-Philippe R.-Lambert"
+title                    : "Louis-Philippe Rousseau-Lambert"
 title_separator          : "-"
-name                     : "Louis-Philippe R.-Lambert"
+name                     : "Louis-Philippe Rousseau-Lambert"
 description              : "Open weather data, geospatial APIs and open standards — Louis-Philippe Rousseau-Lambert."
 url                      : "https://rousseaulambertlp.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -105,12 +105,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Louis-Philippe R.-Lambert"
+  name             : "Louis-Philippe Rousseau-Lambert"
   avatar           : "/images/profile_snow.jpg"
   bio              : "Open weather data · Geospatial APIs · Open standards"
   location         : "Montréal, Québec"
   email            : 
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/louis-philippe-rousseau-lambert-a7408487/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:louis-philippe.rlambert@protonmail.com

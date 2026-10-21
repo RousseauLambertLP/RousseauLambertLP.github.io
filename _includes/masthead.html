@@ -31,7 +31,7 @@
           {%- endfor -%}
         </ul>
         {% if page.translation_url %}
-        <a class="language-switch" href="{{ page.translation_url | relative_url }}" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" lang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" aria-label="{% if page.lang == 'fr' %}Read this page in English{% else %}Lire cette page en français{% endif %}">{% if page.lang == 'fr' %}EN{% else %}FR{% endif %}</a>
+        <a class="language-switch" href="{{ page.translation_url | relative_url }}" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" lang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" aria-label="{% if page.lang == 'fr' %}Read this page in English{% else %}Lire cette page en français{% endif %}">{% if page.lang == 'fr' %}English{% else %}Français{% endif %}</a>
         {% endif %}
         {% if site.search == true %}
         <button class="search__toggle" type="button">

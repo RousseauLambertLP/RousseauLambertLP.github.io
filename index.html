@@ -1,40 +1,24 @@
 ---
 layout: single
+title: Louis-Philippe Rousseau-Lambert
 lang: en
 translation_url: /fr/
-title: "Open data. Useful APIs."
-excerpt: "Weather data, geospatial services and open standards, from a practitioner's perspective."
-author_profile: true
-header:
-  image: "/images/iceland_skogarfoss.jpg"
+page_kind: home
+excerpt: Geospatial data, open services and interoperability.
+share: false
 ---
 
-<p class="site-intro">I'm Louis-Philippe Rousseau-Lambert. I work on geospatial web services and open weather data at the Meteorological Service of Canada.</p>
-
-<p>I’m interested in what makes data useful beyond the platform where it was published: clear APIs, open standards, reliable tools and practical documentation.</p>
-
-<div class="watch-grid">
-  <section class="watch-card">
-    <p class="watch-kicker">Professional background</p>
-    <h2>About Me</h2>
-    <p>My work with MSC GeoMet, geospatial APIs and interoperability, and the ideas I'm exploring.</p>
-    <a class="btn btn--primary" href="{{ '/about/' | relative_url }}">Read about my work</a>
-  </section>
-  <section class="watch-card" lang="en">
-    <p class="watch-kicker">Data · Standards · Software</p>
-    <h2>Technology watch</h2>
-    <p>Selected news about open weather data, geospatial APIs and their tools, with sources and practical implications.</p>
-    <a class="btn btn--primary" href="{{ '/en/vigie/' | relative_url }}">Read the watch</a>
-  </section>
-</div>
-
+<section class="professional-hero">
+  <p class="hero-eyebrow">Louis-Philippe Rousseau-Lambert</p>
+  <h1 id="page-title">Connecting open data with real-world use.</h1>
+  <p class="hero-deck">Geospatial specialist at the Meteorological Service of Canada. I contribute to GeoMet and the delivery of environmental data through APIs and open standards.</p>
+  <div class="hero-actions"><a class="btn btn--primary" href="/about/">My background →</a><a class="hero-secondary" href="/en/vigie/">Read the watch ↗</a></div>
+  <div class="hero-topics"><span>Geospatial data</span><span>OGC API</span><span>Interoperability</span></div>
+</section>
+<section class="home-introduction"><p class="watch-kicker">From data to service</p><h2>Build. Structure. Make accessible.</h2><p>My work combines software development, data management and collaboration to improve reliable geospatial services. This site brings together my professional background and a watch on the tools and standards shaping those services.</p></section>
 {% assign latest = site.vigie_en | sort: 'date' | reverse | first %}
 {% if latest %}
-<section class="watch-latest" lang="en">
-  <p class="watch-kicker">Latest edition · {{ latest.date | date: "%Y-%m-%d" }}</p>
-  <h2><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h2>
-  <p>{{ latest.summary | escape }}</p>
-</section>
+<section class="home-watch"><div class="section-heading"><div><p class="watch-kicker">Professional watch</p><h2>The latest edition</h2></div><a class="text-link" href="/en/vigie/">All editions →</a></div>
+<div class="watch-latest"><p class="watch-kicker">{{ latest.date | date: "%Y-%m-%d" }}</p><h3><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h3><p>{{ latest.summary | escape }}</p><a class="text-link" href="{{ latest.url | relative_url }}">Read the bulletin →</a></div></section>
 {% endif %}
-
-<p class="watch-note">Personal website. Views expressed here are my own.</p>
+<div class="home-links"><a href="/about/"><span class="watch-kicker">Background & expertise</span><h2>About Me ↗</h2><p>GeoMet, geospatial data management and collaboration.</p></a><a href="https://www.linkedin.com/in/louis-philippe-rousseau-lambert-a7408487/"><span class="watch-kicker">Professional network</span><h2>LinkedIn ↗</h2><p>My profile, posts and professional conversations.</p></a></div>
