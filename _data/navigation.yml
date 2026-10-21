@@ -2,7 +2,9 @@
 main:
   - title: "About Me"
     url: /about/
-  - title: "School stuff"
+  - title: "Vigie technologique"
+    url: /vigie/
+  - title: "Academic archive"
     url: /school/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/

@@ -1,6 +1,6 @@
 ---
 layout: collection
-title: "School"
+title: "Academic archive"
 collection: school
 permalink: /school/
 author_profile: true
@@ -8,4 +8,4 @@ header:
   image: "/images/temiscouata.jpg"
 ---
 
-List of all the related school stuff I do.
+Earlier academic projects and research material. These pages are preserved as an archive and reflect the context in which they were written.

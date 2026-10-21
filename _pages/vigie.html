@@ -1,0 +1,39 @@
+---
+layout: single
+title: "Vigie technologique"
+permalink: /vigie/
+lang: fr
+excerpt: "Données météo ouvertes, API géospatiales, standards et logiciels : nouvelles, sources et implications pratiques."
+---
+
+<div lang="fr">
+<p class="site-intro">Les nouvelles qui comptent pour les données météo ouvertes et les services géospatiaux.</p>
+<p>Une sélection issue de ma veille professionnelle : standards OGC et WIS2, GeoMet, GDAL, MapServer, PROJ, pygeoapi, formats de données et IA appliquée. Chaque sujet relie une source à ses conséquences concrètes pour les personnes qui développent ou utilisent ces services.</p>
+
+<p><a class="btn btn--primary" href="{{ '/vigie/feed.xml' | relative_url }}">S’abonner au flux RSS</a> <a class="btn" href="#archives">Parcourir les archives</a></p>
+<p class="watch-note">Pour recevoir les éditions, ajoutez l’adresse du flux RSS à votre lecteur de flux. La fréquence visée est une édition les jours ouvrables; la date de chaque bulletin fait foi.</p>
+
+{% assign editions = site.vigie | sort: 'date' | reverse %}
+{% assign latest = editions | first %}
+{% if latest %}
+<section class="watch-latest" aria-labelledby="latest-title">
+  <p class="watch-kicker">Dernière édition · <time datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%Y-%m-%d" }}</time></p>
+  <h2 id="latest-title"><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h2>
+  <p>{{ latest.summary | escape }}</p>
+  <a href="{{ latest.url | relative_url }}">Lire le bulletin →</a>
+</section>
+{% else %}
+<p>La première édition sera affichée ici dès sa publication.</p>
+{% endif %}
+
+<h2 id="archives">Archives</h2>
+<ul class="watch-archive">
+{% for edition in editions %}
+  <li><time datetime="{{ edition.date | date_to_xmlschema }}">{{ edition.date | date: "%Y-%m-%d" }}</time> <a href="{{ edition.url | relative_url }}">{{ edition.title | escape }}</a><p>{{ edition.summary | escape }}</p></li>
+{% endfor %}
+</ul>
+
+<h2>Une veille orientée vers la pratique</h2>
+<p>Les annonces officielles, versions publiées, changements intégrés au code et problèmes signalés sont distingués. Une piste de test ou une interprétation est présentée comme telle. Les sources primaires sont privilégiées; les bulletins peuvent être corrigés à mesure que de nouveaux renseignements deviennent disponibles.</p>
+<p class="watch-note">Veille personnelle préparée avec l’aide d’outils d’IA. Elle ne constitue pas une communication officielle d’Environnement et Changement climatique Canada ni du Service météorologique du Canada. Vérifiez les avis et la documentation d’origine avant une décision opérationnelle.</p>
+</div>

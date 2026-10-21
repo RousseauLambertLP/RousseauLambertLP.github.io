@@ -6,3 +6,18 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Shared styles for the professional homepage and technology watch. */
+.site-intro { font-size: 1.2em; line-height: 1.65; }
+.watch-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 2rem 0; }
+.watch-card, .watch-latest { border: 1px solid #cddadd; border-radius: 8px; padding: 1.4rem; background: #f6f9fa; }
+.watch-card h2, .watch-latest h2 { margin-top: .3rem; border: 0; }
+.watch-card .btn { margin-bottom: 0; }
+.watch-kicker { color: #385f69; font-size: .75em; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.watch-latest { border-left: 4px solid #287582; margin: 2rem 0; }
+.watch-note { font-size: .8em; color: #526269; line-height: 1.6; }
+.watch-archive { padding-left: 0; list-style: none; }
+.watch-archive li { border-bottom: 1px solid #dbe3e5; padding: 1rem 0; }
+.watch-archive time { display: block; font-size: .8em; color: #526269; }
+.watch-archive p { margin: .35rem 0 0; font-size: .9em; }
+@media (max-width: 680px) { .watch-grid { grid-template-columns: 1fr; } .watch-card, .watch-latest { padding: 1rem; } }

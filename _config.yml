@@ -18,8 +18,8 @@ locale                   : "en-CA"
 title                    : "Louis-Philippe R.-Lambert"
 title_separator          : "-"
 name                     : "Louis-Philippe R.-Lambert"
-description              : "My own Website"
-url                      : "https://rousseaulambertlp.github.io/"
+description              : "Open weather data, geospatial APIs and open standards — Louis-Philippe Rousseau-Lambert."
+url                      : "https://rousseaulambertlp.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub use    rname/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -107,7 +107,7 @@ analytics:
 author:
   name             : "Louis-Philippe R.-Lambert"
   avatar           : "/images/profile_snow.jpg"
-  bio              : "Geospatial specialist for ECCC"
+  bio              : "Open weather data · Geospatial APIs · Open standards"
   location         : "Montréal, Québec"
   email            : 
   links:
@@ -172,6 +172,7 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - CONTRIBUTING.md
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
 keep_files:
@@ -211,7 +212,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York
 
 
 # Plugins (previously gems:)
@@ -297,9 +298,21 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # Technology watch editions
+  - scope:
+      path: ""
+      type: vigie
+    values:
+      layout: vigie
+      author_profile: true
+      share: false
+      comments: false
 share: true
 
 collections:
+  vigie:
+    output: true
+    permalink: /vigie/:path/
   school:
     output: true
     permalink: /:collection/:path/

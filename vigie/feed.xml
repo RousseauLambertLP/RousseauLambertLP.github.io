@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /vigie/feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Vigie technologique — Louis-Philippe Rousseau-Lambert</title>
+  <link>{{ '/vigie/' | absolute_url | xml_escape }}</link>
+  <description>Données météo ouvertes, API géospatiales, standards et logiciels : sources et implications pratiques.</description>
+  <language>fr-ca</language>
+  <atom:link href="{{ '/vigie/feed.xml' | absolute_url | xml_escape }}" rel="self" type="application/rss+xml" />
+  {% assign editions = site.vigie | sort: 'date' | reverse %}
+  {% for edition in editions limit:30 %}
+  <item>
+    <title>{{ edition.title | xml_escape }}</title>
+    <link>{{ edition.url | absolute_url | xml_escape }}</link>
+    <guid isPermaLink="true">{{ edition.url | absolute_url | xml_escape }}</guid>
+    <pubDate>{{ edition.date | date_to_rfc822 }}</pubDate>
+    <description>{{ edition.content | markdownify | xml_escape }}</description>
+  </item>
+  {% endfor %}
+</channel>
+</rss>

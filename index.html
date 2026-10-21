@@ -1,6 +1,38 @@
 ---
-layout: home
+layout: single
+title: "Open data. Useful APIs."
+excerpt: "Weather data, geospatial services and open standards, from a practitioner's perspective."
 author_profile: true
 header:
   image: "/images/iceland_skogarfoss.jpg"
 ---
+
+<p class="site-intro">I'm Louis-Philippe Rousseau-Lambert. I work on geospatial web services and open weather data at the Meteorological Service of Canada.</p>
+
+<p>I’m interested in what makes data useful beyond the platform where it was published: clear APIs, open standards, reliable tools and practical documentation.</p>
+
+<div class="watch-grid">
+  <section class="watch-card">
+    <p class="watch-kicker">Professional background</p>
+    <h2>About Me</h2>
+    <p>My work with MSC GeoMet, geospatial APIs and interoperability, and the ideas I'm exploring.</p>
+    <a class="btn btn--primary" href="{{ '/about/' | relative_url }}">Read about my work</a>
+  </section>
+  <section class="watch-card" lang="fr">
+    <p class="watch-kicker">Données · Standards · Logiciels</p>
+    <h2>Vigie technologique</h2>
+    <p>Une sélection de nouvelles sur les données météo ouvertes, les API géospatiales et leurs outils. Avec sources et implications pratiques.</p>
+    <a class="btn btn--primary" href="{{ '/vigie/' | relative_url }}">Consulter la vigie</a>
+  </section>
+</div>
+
+{% assign latest = site.vigie | sort: 'date' | reverse | first %}
+{% if latest %}
+<section class="watch-latest" lang="fr">
+  <p class="watch-kicker">Dernière édition · {{ latest.date | date: "%Y-%m-%d" }}</p>
+  <h2><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h2>
+  <p>{{ latest.summary | escape }}</p>
+</section>
+{% endif %}
+
+<p class="watch-note">Personal website. Views expressed here are my own.</p>
